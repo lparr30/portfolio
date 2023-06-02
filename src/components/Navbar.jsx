@@ -1,8 +1,8 @@
 function Navbar() {return(
-    <div>
-        <p>About</p>
-        <p>Projects</p>
-        <p>Contact</p>
+    <div id='navbar'>
+        <p className='buttons'>About</p>
+        <p className='buttons'>Projects</p>
+        <p className='buttons'>Contact</p>
     </div>
 )}
 

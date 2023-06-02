@@ -1,6 +1,23 @@
-.header {
-  background-color: rgba(232, 65, 10, 0.698);
+* {
+  font-family: 'DM Serif Display', serif;
 }
+
+.header {
+  background-color: #e36414;
+}
+
+/* #navbar {
+  display: flex;
+  justify-content: center;
+} */
+
+.buttons {
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.5);
+  width: 5em;
+  border-radius: 18px;
+  text-align: center;
+}
+
 .picture {
   width: 20em;
   height: auto;
@@ -14,15 +31,3 @@
 #icon {
   width: 2em;
 }
-
-/* .mail {
-  width: 2em;
-}
-
-.linkedin {
-  width: 2em;
-}
-
-.github {
-  width: 2em;
-} */

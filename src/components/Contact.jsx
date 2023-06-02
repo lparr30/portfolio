@@ -5,7 +5,6 @@ import github from '../assets/github.svg'
 function Contact() {return(
     <div>
         <h3>Contact Me</h3>
-        {/* <i className='github' class="bi bi-github"></i> */}
         <img id='icon' src={gmail} alt="gmail icon" />
         <p>lizajparr@gmail.com</p>
         <img id='icon' src={linkedin} alt="linkedin icon" />
