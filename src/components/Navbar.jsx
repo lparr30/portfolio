@@ -1,18 +1,15 @@
-function Navbar() {return(
-    <div id='navbar'>
-        <p onClick={Scroll()} id='buttons'>About</p>
-        <p id='buttons'>Projects</p>
-        <p id='buttons'>Contact</p>
-    </div>
-)}
+import { useState } from 'react';
 
-// add onmouseover
+function Navbar() {
 
-function Scroll() {
-    console.log('hi')
-    const section = document.getElementById('');
-    section.scrollIntoView;
-    return()
-}
+    return(
+        <div id='navbar'>
+            <p className='buttons'>About</p>
+            <p className='buttons'>Projects</p>
+            <p className='buttons'>Contact</p>
+        </div>
+    )}
+
+
 
 export default Navbar;

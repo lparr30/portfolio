@@ -22,18 +22,30 @@
 #navbar {
   display: flex;
   justify-content: center;
-  justify-content: space-between;
-  justify-content: space-around;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  height: 10vh;
+  /* padding: 10px; */
   /* margin-top: 0.5em; */
 }
 
-#buttons {
+.buttons {
+  font-size: medium;
   box-shadow: var(--neuShadow);
   width: 5em;
+  height: 2em;
   border-radius: var(--corners);
   text-align: center;
   padding-top: 3px;
   padding-bottom: 3px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+p.buttons:hover {
+  font-weight: bold;
+  font-size: large;
+  /* color: red; */
 }
 
 .intro {
@@ -89,8 +101,39 @@
   margin-left: 1em;
 }
 
-#icon {
+#iconStyles {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
   width: 2em;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.iconAlt {
+  width: 2em;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.iconRow {
+  display: flex;
+  margin-left: 40vw;
+  align-items: center;
+}
+
+.iconRowAlt {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 44vw;
+  align-items: center;
+}
+
+.contactStyle {
+  font-style: italic;
 }
 
 #footer {
