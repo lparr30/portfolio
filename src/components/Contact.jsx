@@ -3,8 +3,8 @@ import linkedin from '../assets/linkedin.svg'
 import github from '../assets/github.svg'
 
 function Contact() {return(
-    <div className='contact margin'>
-        <h3>Contact Me</h3>
+    <div className='margin'>
+        <h2>Contact Me</h2>
         <div id='iconStyles'>
             <div className='iconRow'>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lizajparr@gmail.com" target='_blank'><img className='icon' src={gmail} alt="gmail icon" /></a>
