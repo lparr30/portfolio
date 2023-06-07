@@ -115,6 +115,30 @@ p.buttons:hover {
   flex-direction: column;
 } */
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.sky {
+  width: 80vw;
+  border-radius: var(--corners);
+}
+
+.night {
+  width: 80vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: var(--corners);
+}
+
+.beach {
+  width: 80vw;
+  border-radius: var(--corners);
+}
+
 .icon {
   width: 2em;
   margin-right: 15px;
