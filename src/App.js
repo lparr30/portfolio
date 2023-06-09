@@ -6,6 +6,10 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 function App() {
   return (
     <div className="App">

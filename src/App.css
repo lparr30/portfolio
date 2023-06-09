@@ -54,7 +54,7 @@ p.buttons:hover {
 }
 
 #picture {
-  width: 15em;
+  width: 60vw;
   height: auto;
   border-radius: 40px;
   margin-left: 30vw;
@@ -120,6 +120,10 @@ p.buttons:hover {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+}
+
+#test {
+  background-color: rgba(128, 128, 128, 0.55);
 }
 
 .sky {

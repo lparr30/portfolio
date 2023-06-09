@@ -4,7 +4,7 @@ import github from '../assets/github.svg'
 
 function Contact() {return(
     <div className='margin'>
-        <h2>Contact Me</h2>
+        <h2 id='contactSection'>Contact Me</h2>
         <h4 >Click an icon to contact me.</h4>
         <div id='iconStyles'>
             <div className='iconRow'>
