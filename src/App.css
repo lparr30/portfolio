@@ -48,7 +48,8 @@
 
 p.buttons:hover {
   font-weight: bold;
-  box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);;
+  box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
+  cursor: pointer;
   /* font-size: large; */
   /* color: red; */
 }
@@ -122,8 +123,21 @@ p.buttons:hover {
   align-items: center;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+
 #test {
+  /* display: none;  */
   background-color: rgba(128, 128, 128, 0.55);
+  width: 80vw;
+  height: auto;
+  position: fixed;
+  z-index: 2;
 }
 
 .sky {
