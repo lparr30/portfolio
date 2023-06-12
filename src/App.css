@@ -1,5 +1,6 @@
 :root {
   --neuShadow: -4px -4px 6px rgba(230, 230, 230, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.239);
+  --bigShadow: -4px -4px 6px rgba(215, 215, 215, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.258);
   --orangeShadow: -4px -4px 6px rgba(251, 140, 36, 0.657), 4px 4px 6px rgba(0, 0, 0, 0.506);
   --introBackground: rgb(214, 112, 33);
   --corners: 18px;
@@ -61,6 +62,7 @@ p.buttons:hover {
   margin-left: 115px;
   margin-right: 12px;
   position: absolute;
+  box-shadow: var(--bigShadow);
 }
 
 .intro {
@@ -109,6 +111,7 @@ p.buttons:hover {
   height: 17em;
   border-radius: 40px;
   margin-right: 15px;
+  box-shadow: var(--bigShadow);
   /* margin-left: 55vw; */
 }
 
@@ -144,6 +147,7 @@ p.buttons:hover {
 .sky {
   width: 80vw;
   border-radius: var(--corners);
+  box-shadow: var(--bigShadow);
 }
 
 .night {
@@ -151,11 +155,13 @@ p.buttons:hover {
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: var(--corners);
+  box-shadow: var(--bigShadow);
 }
 
 .beach {
   width: 80vw;
   border-radius: var(--corners);
+  box-shadow: var(--bigShadow);
 }
 
 .icon {
