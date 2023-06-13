@@ -13,7 +13,7 @@ function Contact() {return(
             </div>
             <div className='iconRowAlt'>
                 <a href="https://www.linkedin.com/in/lizajparr/" target='_blank'><img className='iconAlt' src={linkedin} alt="linkedin icon" /></a>
-                <p className='contactStyle'>@lizajparr</p>
+                <p className='contactStyleAlt'>@lizajparr</p>
             </div>
             <div className='iconRow'>
                 <a href="https://github.com/lparr30" target='_blank'><img className='icon' src={github} alt="github icon" /></a>
