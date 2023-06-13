@@ -1,32 +1,8 @@
 import night from '../assets/night-sky.jpeg';
 import sky from '../assets/sky.jpeg';
 import beach from '../assets/beach.jpeg';
+import Overlay from './Overlay';
 import { useState } from 'react';
-
-function repo() {
-    console.log('repo');
-}
-
-function deployed() {
-    console.log('deployed');
-}
-
-function closeOverlay() {
-    console.log('x');
-}
-
-function Overlay(props) {return(
-    <>
-    {props.isClicked && (
-        <div className='overlay'>
-            <p>{props.description}</p>
-            <button onClick={repo}>Repository</button>
-            <button onClick={deployed}>Deployed App</button>
-            <button onClick={closeOverlay}>X</button>
-        </div>
-    )}
-    </>
-)}
 
 function Projects(){
     
