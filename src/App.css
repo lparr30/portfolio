@@ -127,21 +127,13 @@ p.buttons:hover {
   align-items: center;
 }
 
-.hide {
-  display: none;
-}
-
-.show {
-  display: inline;
-}
-
-#test {
-  /* display: none;  */
-  background-color: rgba(128, 128, 128, 0.55);
+.overlay {
+  z-index: 1;
+  /* position: fixed; */
+  color: whitesmoke;
+  background-color: rgba(54, 54, 54, 0.492);
   width: 80vw;
-  height: auto;
-  position: fixed;
-  z-index: 2;
+  border-radius: var(--corners);
 }
 
 .sky {
@@ -165,6 +157,49 @@ p.buttons:hover {
 }
 
 .icon {
+  width: 35px;
+  /* position: absolute; */
+  /* margin-right: 15px; */
+  /* margin-left: 49vw; */
+}
+
+.iconAlt {
+  width: 35px;
+  /* position: absolute; */
+  /* margin-left: 15px; */
+}
+
+#iconStyles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconRow {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.iconRowAlt {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.contactStyle {
+  position: absolute;
+  margin-left: 50px;
+  font-style: italic;
+}
+
+.contactStyleAlt {
+  position: absolute;
+  margin-left: -90px;
+  font-style: italic;
+}
+
+/* .icon {
   width: 2em;
   margin-right: 15px;
 }
@@ -189,7 +224,7 @@ p.buttons:hover {
 
 .contactStyle {
   font-style: italic;
-}
+} */
 
 #footer {
   padding-bottom: 10px;
