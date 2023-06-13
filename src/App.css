@@ -178,6 +178,7 @@ p.buttons:hover {
 .iconRow {
   display: flex;
   align-items: center;
+  margin: 10px auto;
   /* justify-content: center; */
 }
 
