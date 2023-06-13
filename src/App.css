@@ -102,17 +102,17 @@ p.buttons:hover {
   /* margin-left: 8px; */
 }
 
-.about {
+/* .about {
   display: flex;
-}
+} */
 
 #aboutPicture {
-  width: 20em;
+  width: 185px;
   height: 17em;
   border-radius: 40px;
   margin-right: 15px;
   box-shadow: var(--bigShadow);
-  /* margin-left: 55vw; */
+  float: left;
 }
 
 /* #iconStyles {
