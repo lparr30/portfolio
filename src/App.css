@@ -127,6 +127,15 @@ p.buttons:hover {
   align-items: center;
 }
 
+.overlay {
+  z-index: 1;
+  /* position: fixed; */
+  color: whitesmoke;
+  background-color: rgba(54, 54, 54, 0.492);
+  width: 80vw;
+  border-radius: var(--corners);
+}
+
 .sky {
   width: 80vw;
   border-radius: var(--corners);
