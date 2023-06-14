@@ -129,7 +129,7 @@ p.buttons:hover {
 
 .overlay {
   z-index: 1;
-  /* position: fixed; */
+  position: absolute;
   color: whitesmoke;
   background-color: rgba(54, 54, 54, 0.492);
   width: 80vw;
@@ -199,33 +199,6 @@ p.buttons:hover {
   margin-left: -90px;
   font-style: italic;
 }
-
-/* .icon {
-  width: 2em;
-  margin-right: 15px;
-}
-
-.iconAlt {
-  width: 2em;
-  margin-left: 15px;
-}
-
-.iconRow {
-  display: flex;
-  margin-left: 40vw;
-  align-items: center;
-}
-
-.iconRowAlt {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-right: 44vw;
-  align-items: center;
-}
-
-.contactStyle {
-  font-style: italic;
-} */
 
 #footer {
   padding-bottom: 10px;
