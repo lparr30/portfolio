@@ -11,7 +11,7 @@ function Projects(){
 
     function toggleOverlay() {
         setIsClicked(!isClicked);
-        console.log("i got clicked")
+        console.log("i got clicked");
     }
     
     return(
