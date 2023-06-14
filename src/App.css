@@ -4,20 +4,14 @@
   --orangeShadow: -4px -4px 6px rgba(251, 140, 36, 0.657), 4px 4px 6px rgba(0, 0, 0, 0.506);
   --introBackground: rgb(214, 112, 33);
   --corners: 18px;
+  --introFont: 'Philosopher', sans-serif;
 }
 
 * {
-  /* font-family: 'DM Serif Display', serif; */
   font-family: 'Noto Sans KR', sans-serif;
-  color: rgb(0, 0, 0);
   color: rgb(220, 220, 220);
   background-color: rgb(180, 68, 37);
-  /* font-family: 'Poppins', sans-serif; */
 }
-
-/* .App {
-  background-color: hsla(23, 82%, 44%, 0.914);
-} */
 
 .margin {
   margin: 0 15px;
@@ -25,13 +19,9 @@
 
 #navbar {
   display: flex;
-  /* justify-content: center; */
   justify-content: space-between;
-  /* justify-content: space-around; */
   height: 70px;
-  /* position: fixed; */
   padding: 10px;
-  /* margin-top: 0.5em; */
 }
 
 .buttons {
@@ -41,8 +31,8 @@
   height: 2em;
   border-radius: var(--corners);
   text-align: center;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 5px;
+  padding-bottom: 1px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -51,16 +41,14 @@ p.buttons:hover {
   font-weight: bold;
   box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
   cursor: pointer;
-  /* font-size: large; */
-  /* color: red; */
 }
 
 #picture {
-  width: 250px;
+  width: 210px;
   height: auto;
   border-radius: 40px;
-  margin-left: 115px;
-  margin-right: 12px;
+  margin-top: 20px;
+  margin-left: 38vw;
   position: absolute;
   box-shadow: var(--bigShadow);
 }
@@ -68,62 +56,49 @@ p.buttons:hover {
 .intro {
   box-shadow: var(--neuShadow);
   border-radius: var(--corners);
-  /* margin-left: 20%; */
-  /* margin-top: 15%; */
   background-color: var(--introBackground);
-  width: 300px;
+  width: 270px;
   height: 275px;
   margin-top: 175px;
+  margin-left: 10vw;
   padding-left: 12px;
-  padding-right: 12px;;
-  /* position: absolute; */
+  padding-right: 12px;
 }
 
 #first {
   font-size: 1.5em;
   background-color: var(--introBackground);
   border-radius: var(--corners);
-  /* margin-left: 8px; */
 }
 
 #second {
-  font-size: 2.5em;
-  margin-left: 1.5em;
-  background-color: var(--introBackground)
+  font-size: 45px;
+  margin-left: 49px;
+  background-color: var(--introBackground);
+  font-style: italic;
+  font-family: var(--introFont);
 }
 
 #third {
   background-color: var(--introBackground)
-  /* margin-left: 8px; */
 }
 
 #fourth {
   background-color: var(--introBackground)
-  /* margin-left: 8px; */
 }
-
-/* .about {
-  display: flex;
-} */
 
 #aboutPicture {
   width: 185px;
-  height: 17em;
+  height: auto;
   border-radius: 40px;
   margin-right: 15px;
   box-shadow: var(--bigShadow);
   float: left;
 }
 
-/* #iconStyles {
-  display: flex;
-  flex-direction: column;
-} */
-
 .projects {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -132,17 +107,17 @@ p.buttons:hover {
   position: absolute;
   color: whitesmoke;
   background-color: rgba(54, 54, 54, 0.492);
-  width: 80vw;
+  width: 200px;
   border-radius: var(--corners);
 }
 
-.sky {
+#sky {
   width: 80vw;
   border-radius: var(--corners);
   box-shadow: var(--bigShadow);
 }
 
-.night {
+#night {
   width: 80vw;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -150,7 +125,7 @@ p.buttons:hover {
   box-shadow: var(--bigShadow);
 }
 
-.beach {
+#beach {
   width: 80vw;
   border-radius: var(--corners);
   box-shadow: var(--bigShadow);
@@ -158,15 +133,10 @@ p.buttons:hover {
 
 .icon {
   width: 35px;
-  /* position: absolute; */
-  /* margin-right: 15px; */
-  /* margin-left: 49vw; */
 }
 
 .iconAlt {
   width: 35px;
-  /* position: absolute; */
-  /* margin-left: 15px; */
 }
 
 #iconStyles {
@@ -179,13 +149,11 @@ p.buttons:hover {
   display: flex;
   align-items: center;
   margin: 10px auto;
-  /* justify-content: center; */
 }
 
 .iconRowAlt {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .contactStyle {
@@ -196,11 +164,141 @@ p.buttons:hover {
 
 .contactStyleAlt {
   position: absolute;
-  margin-left: -90px;
+  margin-left: -100px;
   font-style: italic;
 }
 
 #footer {
   padding-bottom: 10px;
   text-align: center;
+}
+
+@media (min-width: 482px) {
+  #picture {
+    width: 230px;
+    height: auto;
+    margin-left: 45vw;
+  }
+
+  .intro {
+    width: 300px;
+    height: 275px;
+    margin-top: 180px;
+    padding-left: 15px;
+    margin-left: 22vw;
+  }
+}
+
+@media (min-width: 769px) {
+  :root {
+    --bigFont: 30px;
+    --regFont: 18px;
+  }
+  
+  #navbar {
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .buttons {
+    font-size: 19px;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  #picture {
+    width: 325px;
+    height: auto;
+    margin-left: 42vw;
+  }
+
+  .intro {
+    width: 375px;
+    height: 325px;
+    margin-top: 230px;
+    padding-left: 20px;
+    margin-left: 25vw;
+  }
+
+  p.font {
+    font-size: var(--regFont);
+  }
+
+  #second {
+    font-size: 58px;
+  }
+
+  #aboutSection {
+    font-size: var(--bigFont);
+  }
+
+  #aboutPicture {
+    width: 210px;
+    margin-right: 20px;
+  }
+
+  .about {
+    font-size: 18px;
+  }
+
+  #projectsSection {
+    font-size: var(--bigFont);
+  }
+
+  #sky {
+    width: 670px;
+  }
+
+  #night {
+    width: 325px;
+    margin-right: 18px;
+  }
+
+  #beach {
+    width: 325px;
+  }
+
+  #bigScreens {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px
+  }
+
+  #contactSection {
+    font-size: var(--bigFont);
+  }
+
+  #iconStyles {
+    font-size: var(--regFont);
+  }
+
+  .icon {
+    width: 40px;
+  }
+  
+  .iconAlt {
+    width: 40px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #picture {
+    width: 350px;
+    height: auto;
+    margin-left: 48vw;
+  }
+
+  .intro {
+    width: 425px;
+    height: 300px;
+    margin-top: 280px;
+    margin-left: 30vw;
+  }
+}
+
+@media (min-width: 1201px) {
+  #aboutPicture {
+    width: 185px;
+  }
 }

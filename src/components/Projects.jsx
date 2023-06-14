@@ -20,18 +20,20 @@ function Projects(){
             <div className='projects'>
                 <div>
                     <Overlay isClicked={isClicked} description='sky'/>
-                    <img className='sky' src={sky} alt="sky" onClick={toggleOverlay}/>
+                    <img id='sky' src={sky} alt="sky" onClick={toggleOverlay}/>
                     {/* <a href="http://www.google.com" target="_blank"></a> */}
                 </div>
-                <div>
-                    <Overlay isClicked={isClicked} description='night'/>
-                    <img className='night' src={night} alt="night" onClick={toggleOverlay}/>
-                    {/* <a href="http://www.google.com" target="_blank"></a> */}
-                </div>
-                <div>
-                    <Overlay isClicked={isClicked} description='beach'/>
-                    <img className='beach' src={beach} alt="beach" onClick={toggleOverlay}/>
-                    {/* <a href="http://www.google.com" target="_blank"></a> */}
+                <div id='bigScreens'>
+                    <div>
+                        <Overlay isClicked={isClicked} description='night'/>
+                        <img id='night' src={night} alt="night" onClick={toggleOverlay}/>
+                        {/* <a href="http://www.google.com" target="_blank"></a> */}
+                    </div>
+                    <div>
+                        <Overlay isClicked={isClicked} description='beach'/>
+                        <img id='beach' src={beach} alt="beach" onClick={toggleOverlay}/>
+                        {/* <a href="http://www.google.com" target="_blank"></a> */}
+                    </div>
                 </div>
             </div>
         </div>
