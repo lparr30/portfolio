@@ -4,11 +4,11 @@
   --orangeShadow: -4px -4px 6px rgba(251, 140, 36, 0.657), 4px 4px 6px rgba(0, 0, 0, 0.506);
   --introBackground: rgb(214, 112, 33);
   --corners: 18px;
+  --introFont: 'Philosopher', sans-serif;
 }
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
-  color: rgb(0, 0, 0);
   color: rgb(220, 220, 220);
   background-color: rgb(180, 68, 37);
 }
@@ -44,11 +44,11 @@ p.buttons:hover {
 }
 
 #picture {
-  width: 250px;
+  width: 210px;
   height: auto;
   border-radius: 40px;
-  margin-left: 115px;
-  margin-right: 12px;
+  margin-top: 20px;
+  margin-left: 38vw;
   position: absolute;
   box-shadow: var(--bigShadow);
 }
@@ -57,9 +57,10 @@ p.buttons:hover {
   box-shadow: var(--neuShadow);
   border-radius: var(--corners);
   background-color: var(--introBackground);
-  width: 300px;
+  width: 270px;
   height: 275px;
   margin-top: 175px;
+  margin-left: 10vw;
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -71,9 +72,11 @@ p.buttons:hover {
 }
 
 #second {
-  font-size: 2.5em;
-  margin-left: 1.5em;
-  background-color: var(--introBackground)
+  font-size: 45px;
+  margin-left: 49px;
+  background-color: var(--introBackground);
+  font-style: italic;
+  font-family: var(--introFont);
 }
 
 #third {
@@ -161,13 +164,29 @@ p.buttons:hover {
 
 .contactStyleAlt {
   position: absolute;
-  margin-left: -90px;
+  margin-left: -100px;
   font-style: italic;
 }
 
 #footer {
   padding-bottom: 10px;
   text-align: center;
+}
+
+@media (min-width: 482px) {
+  #picture {
+    width: 230px;
+    height: auto;
+    margin-left: 45vw;
+  }
+
+  .intro {
+    width: 300px;
+    height: 275px;
+    margin-top: 180px;
+    padding-left: 15px;
+    margin-left: 22vw;
+  }
 }
 
 @media (min-width: 769px) {
@@ -191,8 +210,7 @@ p.buttons:hover {
   #picture {
     width: 325px;
     height: auto;
-    margin-left: 150px;
-    margin-right: 12px;
+    margin-left: 42vw;
   }
 
   .intro {
@@ -200,6 +218,7 @@ p.buttons:hover {
     height: 325px;
     margin-top: 230px;
     padding-left: 20px;
+    margin-left: 25vw;
   }
 
   p.font {
@@ -207,7 +226,7 @@ p.buttons:hover {
   }
 
   #second {
-    font-size: 50px;
+    font-size: 58px;
   }
 
   #aboutSection {
@@ -227,6 +246,10 @@ p.buttons:hover {
     font-size: var(--bigFont);
   }
 
+  #sky {
+    width: 670px;
+  }
+
   #night {
     width: 325px;
     margin-right: 18px;
@@ -234,8 +257,6 @@ p.buttons:hover {
 
   #beach {
     width: 325px;
-    margin-left: 18px;
-    margin-top: 13px;
   }
 
   #bigScreens {
@@ -258,5 +279,26 @@ p.buttons:hover {
   
   .iconAlt {
     width: 40px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #picture {
+    width: 350px;
+    height: auto;
+    margin-left: 48vw;
+  }
+
+  .intro {
+    width: 425px;
+    height: 300px;
+    margin-top: 280px;
+    margin-left: 30vw;
+  }
+}
+
+@media (min-width: 1201px) {
+  #aboutPicture {
+    width: 185px;
   }
 }
