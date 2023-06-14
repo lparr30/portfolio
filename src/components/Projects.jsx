@@ -19,18 +19,18 @@ function Projects(){
             <h2 id='projectsSection'>Projects</h2>
             <div className='projects'>
                 <div>
-                    <Overlay isClicked={isClicked} description='sky'/>
+                    <Overlay description='sky'/>
                     <img id='sky' src={sky} alt="sky" onClick={toggleOverlay}/>
                     {/* <a href="http://www.google.com" target="_blank"></a> */}
                 </div>
                 <div id='bigScreens'>
                     <div>
-                        <Overlay isClicked={isClicked} description='night'/>
+                        <Overlay description='night'/>
                         <img id='night' src={night} alt="night" onClick={toggleOverlay}/>
                         {/* <a href="http://www.google.com" target="_blank"></a> */}
                     </div>
                     <div>
-                        <Overlay isClicked={isClicked} description='beach'/>
+                        <Overlay description='beach'/>
                         <img id='beach' src={beach} alt="beach" onClick={toggleOverlay}/>
                         {/* <a href="http://www.google.com" target="_blank"></a> */}
                     </div>

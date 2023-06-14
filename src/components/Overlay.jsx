@@ -13,6 +13,7 @@
 
 function Overlay({ isClicked, description }) {
     console.log('overlay is working');
+
     return(
         <>
         <h1 className='overlay'>{description}</h1>
