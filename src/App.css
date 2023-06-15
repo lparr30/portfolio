@@ -127,6 +127,8 @@ p.buttons:hover {
 
 #beach {
   width: 80vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: var(--corners);
   box-shadow: var(--bigShadow);
 }

@@ -20,6 +20,7 @@ function Overlay({ isClicked, description }) {
         {isClicked && (
             <div >
                 <h1>{description}</h1>
+                <h1>Poop</h1>
                 {/* <button onClick={repo}>Repository</button>
                 <button onClick={deployed}>Deployed App</button>
                 <button onClick={closeOverlay}>X</button> */}
