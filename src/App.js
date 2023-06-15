@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Homepage from './components/Homepage';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
-import Projects from './components/Projects';
+import Projects from './components/projectSection/Projects';
 import Footer from './components/Footer';
 
 window.onbeforeunload = function () {
