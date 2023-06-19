@@ -20,7 +20,7 @@ const cardInfo = [
     {
         picName: 'beach',
         title: 'beach',
-        description: 'nighttime very dark',
+        description: 'sand everywhere',
         image: beach,
         alt: 'beach'
     }
