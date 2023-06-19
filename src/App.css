@@ -117,8 +117,15 @@ p.buttons:hover {
   border-radius: var(--corners);
 }
 
+.overlay-title {
+  background-color: rgba(54, 54, 54, 0);
+  margin-top: -50px;
+  margin-left: 10px;
+}
 .overlay-text {
   background-color: rgba(54, 54, 54, 0);
+  /* margin-top: px; */
+  margin-left: 10px;
 }
 
 .closeOverlay {
@@ -132,25 +139,43 @@ p.buttons:hover {
   padding-top: 1px;
   padding-bottom: 3px;
   cursor: pointer;
+  margin-left: 440px;
+}
+
+.overlayButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: rgb(0,0,0,0);
+}
+
+.overlayButtons p {
+  margin: 0;
+}
+
+.overlayButtons a {
+  text-decoration: none;
+  border-radius: var(--corners);
 }
 
 .repo {
   font-size: 17px;
   background-color: var(--introBackground);
   box-shadow: -4px -4px 6px rgba(230, 230, 230, 0.324), 4px 4px 6px rgba(0, 0, 0, 0.465);
-  width: 7em;
-  height: 2em;
+  width: 130px;
+  height: 35px;
   border-radius: var(--corners);
   text-align: center;
   padding-top: 5px;
+  align-self: flex-end;
 }
 
 .deployApp {
   font-size: 17px;
   background-color: var(--introBackground);
   box-shadow: -4px -4px 6px rgba(230, 230, 230, 0.324), 4px 4px 6px rgba(0, 0, 0, 0.465);
-  width: 8em;
-  height: 2em;
+  width: 130px;
+  height: 35px;
   border-radius: var(--corners);
   text-align: center;
   padding-top: 5px;
