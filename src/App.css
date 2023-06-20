@@ -138,7 +138,6 @@ p.buttons:hover {
 
 .overlay-title {
   background-color: rgba(54, 54, 54, 0);
-  /* margin-top: -50px; */
   margin-left: 10px;
 }
 
@@ -332,6 +331,10 @@ p.buttons:hover {
   #projectsSection {
     font-size: var(--bigFont);
   }
+
+  /* .project-card:hover {
+    visibility: visible;
+  } */
 
   .overlay {
     width: 70vw;
