@@ -122,7 +122,13 @@ p.buttons:hover {
 
 .overlay-top {
   background-color: rgba(54, 54, 54, 0);
+}
 
+.overlay-title-row {
+  display: flex;
+  /* text-align: center; */
+  justify-content: space-between;
+  background-color: rgba(54, 54, 54, 0);
 }
 
 .overlay-bottom {
@@ -132,12 +138,12 @@ p.buttons:hover {
 
 .overlay-title {
   background-color: rgba(54, 54, 54, 0);
-  margin-top: -50px;
+  /* margin-top: -50px; */
   margin-left: 10px;
 }
+
 .overlay-text {
   background-color: rgba(54, 54, 54, 0);
-  /* margin-top: px; */
   margin-left: 10px;
 }
 
@@ -145,14 +151,14 @@ p.buttons:hover {
   font-size: 17px;
   background-color: var(--introBackground);
   box-shadow: -4px -4px 6px rgba(230, 230, 230, 0.323), 4px 4px 6px rgba(0, 0, 0, 0.465);
-  width: 30px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
+  font-weight: bold;
   border-radius: 25px;
   text-align: center;
-  padding-top: 1px;
   padding-bottom: 3px;
+  margin: 10px 10px 0 0;
   cursor: pointer;
-  margin-left: 440px;
 }
 
 .overlayButtons {

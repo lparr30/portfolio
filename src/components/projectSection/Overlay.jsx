@@ -20,8 +20,10 @@ function Overlay({ isClicked, setIsClicked, title, description }) {
         {isClicked && (
             <div className='overlay'>
                 <div className='overlay-top'>
-                    <p className='closeOverlay' onClick={() => setIsClicked(false)}>x</p>
-                    <h2 className='overlay-title'>{title}</h2>
+                    <div className="overlay-title-row">
+                        <h2 className='overlay-title'>{title}</h2>
+                        <button className='closeOverlay' onClick={() => setIsClicked(false)}>x</button>
+                    </div>
                     <p className='overlay-text'>{description}</p>
 
                 </div>
