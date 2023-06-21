@@ -1,6 +1,5 @@
 function Overlay({ isClicked, isHovered, setIsClicked, isMobileDevice, title, description }) {
     
-    // console.log('overlay is working');
 
     return(
         <>
