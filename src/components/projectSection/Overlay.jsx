@@ -1,15 +1,16 @@
-function Overlay({ isClicked, setIsClicked, title, description }) {
+function Overlay({ isClicked, isHovered, setIsClicked, isMobileDevice, title, description }) {
     
-    console.log('overlay is working');
+    // console.log('overlay is working');
 
     return(
         <>
-        {isClicked && (
+        {(isClicked || isHovered) && (
             <div className='overlay'>
                 <div className='overlay-top'>
                     <div className="overlay-title-row">
                         <h2 className='overlay-title'>{title}</h2>
-                        <button className='closeOverlay' onClick={() => setIsClicked(false)}>x</button>
+                        {isMobileDevice && <button className='closeOverlay' onClick={() => setIsClicked(false)}>x</button>}
+                        
                     </div>
                     <p className='overlay-text'>{description}</p>
 
