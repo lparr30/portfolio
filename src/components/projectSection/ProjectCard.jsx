@@ -1,3 +1,4 @@
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 import Overlay from './Overlay';
 import { useState } from 'react';
 
@@ -5,12 +6,22 @@ function ProjectCard({ id, fileName, alt, title, description  }) {
     const [isClicked, setIsClicked] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
 
-    const handleClick = () => {
-        setIsClicked(!isClicked);
+    let { width } = useWindowDimensions();
+    let isMobileDevice = width < 768;
+
+    const handleClick = (event) => {
+        console.log(event);
+        if(isMobileDevice && !isClicked) {
+            setIsClicked(true);
+        } else if (isMobileDevice && isClicked && event.target.classList.contains('closeOverlay')) {
+            setIsClicked(false);
+        }
     };
 
     const handleMouseEnter = () => {
-        setIsHovered(true);
+        if(!isMobileDevice) {
+            setIsHovered(true);
+        }
     };
     
     const handleMouseLeave = () => {
@@ -20,12 +31,11 @@ function ProjectCard({ id, fileName, alt, title, description  }) {
     return(
         <div 
             className="project-card"
-            onClick={handleClick}
+            onClick={(event) => handleClick(event)}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             >
-                <Overlay isClicked={isClicked || isHovered} setIsClicked={setIsClicked} title={title} description={description}/>
-                {/* <img id={id} src={fileName} alt={alt} onClick={() => setIsClicked(!isClicked)}/> */}
+                <Overlay isClicked={isClicked || isHovered} setIsClicked={setIsClicked} isMobileDevice={isMobileDevice} title={title} description={description}/>
                 <img id={id} src={fileName} alt={alt}/>
         </div>
     )}
