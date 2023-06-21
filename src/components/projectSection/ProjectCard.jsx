@@ -9,9 +9,12 @@ function ProjectCard({ id, fileName, alt, title, description  }) {
     let { width } = useWindowDimensions();
     let isMobileDevice = width < 768;
 
-    const handleClick = () => {
-        if(isMobileDevice) {
-            setIsClicked(!isClicked);
+    const handleClick = (event) => {
+        console.log(event);
+        if(isMobileDevice && !isClicked) {
+            setIsClicked(true);
+        } else if (isMobileDevice && isClicked && event.target.classList.contains('closeOverlay')) {
+            setIsClicked(false);
         }
     };
 
@@ -28,11 +31,11 @@ function ProjectCard({ id, fileName, alt, title, description  }) {
     return(
         <div 
             className="project-card"
-            onClick={handleClick}
+            onClick={(event) => handleClick(event)}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             >
-                <Overlay isClicked={isClicked || isHovered} setIsClicked={setIsClicked} title={title} description={description}/>
+                <Overlay isClicked={isClicked || isHovered} setIsClicked={setIsClicked} isMobileDevice={isMobileDevice} title={title} description={description}/>
                 <img id={id} src={fileName} alt={alt}/>
         </div>
     )}

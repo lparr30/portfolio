@@ -1,5 +1,4 @@
 function Overlay({ isClicked, isHovered, setIsClicked, isMobileDevice, title, description }) {
-    
 
     return(
         <>
