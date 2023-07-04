@@ -5,7 +5,6 @@ import github from '../assets/github.svg'
 function Contact() {return(
     <div id='contactSection' className='sectionContainer'>
         <h1 className='headingFont'>Contact Me</h1>
-        <h4>Click an icon to contact me.</h4>
         <div id='iconStyles'>
             <div className='iconRow'>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lizajparr@gmail.com" target='_blank'><img className='icon iconBackground' src={gmail} alt="gmail icon" /></a>
