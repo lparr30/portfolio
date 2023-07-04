@@ -4,8 +4,8 @@ import cardInfo from './CardInfo';
 function Projects(){
 
     return(
-        <div className='margin'>
-            <h2 id='projectsSection'>Projects</h2>
+        <div id='projectsSection' className='sectionContainer'>
+            <h1 className='headingFont'>Projects</h1>
             <div className='projects'>
                 {cardInfo.map((card) => {
                     return (

@@ -13,8 +13,9 @@
   background-color: rgb(180, 68, 37);
 }
 
-.margin {
+.sectionContainer {
   margin: 0 15px;
+  padding: 20px 0;
 }
 
 #navbar {
@@ -87,6 +88,11 @@ p.buttons:hover {
   background-color: var(--introBackground)
 }
 
+.headingFont {
+  font-family: var(--introFont);
+  font-style: italic;
+}
+
 #aboutPicture {
   width: 185px;
   height: auto;
@@ -111,9 +117,9 @@ p.buttons:hover {
   z-index: 1;
   position: absolute;
   color: whitesmoke;
-  background-color: rgba(54, 54, 54, 0.504);
+  background-color: rgba(0, 0, 0, 0.594);
   width: 80vw;
-  height: 100%;
+  height: 99%;
   border-radius: var(--corners);
   display: flex;
   flex-direction: column;
@@ -132,7 +138,7 @@ p.buttons:hover {
 }
 
 .overlay-bottom {
-  padding: 20px 0;
+  padding: 0 0 5% 0;
   background-color: rgba(54, 54, 54, 0);
 }
 
@@ -199,7 +205,7 @@ p.buttons:hover {
   padding-top: 5px;
 }
 
-#sky {
+#happiest {
   width: 80vw;
   border-radius: var(--corners);
   box-shadow: var(--bigShadow);
@@ -215,6 +221,12 @@ p.buttons:hover {
   width: 80vw;
   border-radius: var(--corners);
   box-shadow: var(--bigShadow);
+}
+
+.iconBackground {
+  background-color: white;
+  border-radius: 10%;
+  padding: 4%;
 }
 
 .icon {
@@ -293,6 +305,10 @@ p.buttons:hover {
     margin-right: 50px;
   }
 
+  .sectionContainer {
+    margin: 0 10%;
+  }
+
   #picture {
     width: 325px;
     height: auto;
@@ -333,20 +349,28 @@ p.buttons:hover {
   }
 
   .overlay {
-    width: 50vw;
-    height: 100%;
+    width: 60vw;
+    height: 99%;
   }
 
-  #sky {
-    width: 50vw;
+  .overlay-title {
+    font-size: x-large;
+  }
+
+  .overlay-text {
+    font-size: medium;
+  }
+
+  #happiest {
+    width: 60vw;
   }
 
   #night {
-    width: 50vw;
+    width: 60vw;
   }
 
   #beach {
-    width: 50vw;
+    width: 60vw;
   }
 
   #contactSection {
@@ -378,6 +402,23 @@ p.buttons:hover {
     height: 300px;
     margin-top: 280px;
     margin-left: 30vw;
+  }
+
+  .overlay {
+    width: 50vw;
+    height: 99%;
+  }
+
+  #happiest {
+    width: 50vw;
+  }
+
+  #night {
+    width: 50vw;
+  }
+
+  #beach {
+    width: 50vw;
   }
 }
 
