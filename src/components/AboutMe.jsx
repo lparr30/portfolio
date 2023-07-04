@@ -1,8 +1,8 @@
 import profilePicture2 from '../assets/new-portfolio-pic.jpg'
 
 function AboutMe() {return(
-    <div className='margin'>
-        <h2 id='aboutSection'>About Liza</h2>
+    <div id='aboutSection' className='sectionContainer'>
+        <h1 className='headingFont'>About Liza</h1>
         <div className='about'>
             <img id='aboutPicture' src={profilePicture2} alt="Image of Liza Parr" />
             <p>
