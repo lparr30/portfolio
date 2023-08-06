@@ -5,6 +5,7 @@ function Overlay({
   isMobileDevice,
   title,
   description,
+  deployLink
 }) {
   return (
     <>
@@ -29,7 +30,7 @@ function Overlay({
               <a href="http://www.google.com" target="_blank">
                 <p className="repo">Repository</p>
               </a>
-              <a href="http://www.google.com" target="_blank">
+              <a href={deployLink} target="_blank">
                 <p className="deployApp">Deployed App</p>
               </a>
             </div>

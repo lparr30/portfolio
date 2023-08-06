@@ -9,7 +9,7 @@ function Projects(){
             <div className='projects'>
                 {cardInfo.map((card) => {
                     return (
-                        <ProjectCard id={card.picName} fileName={card.image} alt={card.alt} title={card.title} description={card.description}/>        
+                        <ProjectCard id={card.picName} fileName={card.image} alt={card.alt} title={card.title} description={card.description} deployLink={card.deployLink}/>        
                     )
                 })}
             </div>
