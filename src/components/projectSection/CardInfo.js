@@ -1,6 +1,3 @@
-import night from '../../assets/night-sky.jpeg';
-import sky from '../../assets/sky.jpeg';
-import beach from '../../assets/beach.jpeg';
 import comingSoon from '../../assets/coming-soon.jpeg'
 
 const cardInfo = [
