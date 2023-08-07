@@ -5,6 +5,7 @@ function Overlay({
   isMobileDevice,
   title,
   description,
+  repoLink,
   deployLink
 }) {
   return (
@@ -27,7 +28,7 @@ function Overlay({
           </div>
           <div className="overlay-bottom">
             <div className="overlayButtons">
-              <a href="http://www.google.com" target="_blank">
+              <a href={repoLink} target="_blank">
                 <p className="repo">Repository</p>
               </a>
               <a href={deployLink} target="_blank">

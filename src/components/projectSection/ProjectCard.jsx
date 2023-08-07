@@ -2,7 +2,7 @@ import useWindowDimensions from '../../hooks/useWindowDimensions';
 import Overlay from './Overlay';
 import { useState } from 'react';
 
-function ProjectCard({ id, fileName, alt, title, description, deployLink  }) {
+function ProjectCard({ id, fileName, alt, title, description, repoLink, deployLink  }) {
     const [isClicked, setIsClicked] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -35,7 +35,7 @@ function ProjectCard({ id, fileName, alt, title, description, deployLink  }) {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             >
-                <Overlay isClicked={isClicked || isHovered} setIsClicked={setIsClicked} isMobileDevice={isMobileDevice} title={title} description={description} deployLink={deployLink}/>
+                <Overlay isClicked={isClicked || isHovered} setIsClicked={setIsClicked} isMobileDevice={isMobileDevice} title={title} description={description} repoLink={repoLink} deployLink={deployLink}/>
                 <img id={id} src={fileName} alt={alt}/>
         </div>
     )}

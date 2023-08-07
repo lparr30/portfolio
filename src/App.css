@@ -117,7 +117,7 @@ p.buttons:hover {
   z-index: 1;
   position: absolute;
   color: whitesmoke;
-  background-color: rgba(0, 0, 0, 0.594);
+  background-color: rgba(0, 0, 0, 0.647);
   width: 80vw;
   height: 99%;
   border-radius: var(--corners);
