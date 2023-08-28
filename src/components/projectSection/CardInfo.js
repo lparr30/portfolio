@@ -1,5 +1,6 @@
 import comingSoon from '../../assets/coming-soon.jpeg'
 import happiestHour from '../../assets/Happiest-Hour-pic.png'
+import tweeter from '../../assets/tweeter.png'
 
 const cardInfo = [
     {
@@ -13,17 +14,17 @@ const cardInfo = [
     },
     {
         picName: 'night',
-        title: 'Intodoitive',
-        description: 'is the most intuitive to-do list app on the market. Easy to use and thoughtfully structured, Intodoitive will be the preferred list making app. More to come!',
-        image: comingSoon,
-        alt: 'coming soon',
-        repoLink: 'https://www.google.com',
-        deployLink: 'https://www.google.com'
+        title: 'Tweeter',
+        description: 'is a collective effort in developing a functional micro-blogging app that allows users to create an account and write Twits, among other actions. It provides users with a seamless experience to share their thoughts and connect with others. Our team was able to deliver a successful full stack application as our MVP.',
+        image: tweeter,
+        alt: 'Tweeter homepage',
+        repoLink: 'https://github.com/BobbyCharms/tweeter',
+        deployLink: 'https://tweeter-usk.herokuapp.com/'
     },
     {
-        picName: 'night',
-        title: '',
-        description: '',
+        picName: 'beach',
+        title: 'Intodoitive',
+        description: 'is the most intuitive to-do list app on the market. Intuitive to use and thoughtfully structured, Intodoitive is an independent project which exemplifies my passion for interaction design. Built with Node, React, and Express. More to come!',
         image: comingSoon,
         alt: 'coming soon',
         repoLink: 'https://www.google.com',
