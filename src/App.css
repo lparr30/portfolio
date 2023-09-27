@@ -72,7 +72,15 @@ p.buttons:hover {
   border-radius: var(--corners);
 }
 
-#second {
+/* #second {
+  font-size: 45px;
+  margin-left: 49px;
+  background-color: var(--introBackground);
+  font-style: italic;
+  font-family: var(--introFont);
+} */
+
+h1 {
   font-size: 45px;
   margin-left: 49px;
   background-color: var(--introBackground);
@@ -88,10 +96,16 @@ p.buttons:hover {
   background-color: var(--introBackground)
 }
 
-.headingFont {
+h2 {
   font-family: var(--introFont);
   font-style: italic;
 }
+
+/* 
+.headingFont {
+  font-family: var(--introFont);
+  font-style: italic;
+} */
 
 #aboutPicture {
   width: 185px;
@@ -331,9 +345,9 @@ p.buttons:hover {
     font-size: 58px;
   }
 
-  #aboutSection {
+  /* #aboutSection {
     font-size: var(--bigFont);
-  }
+  } */
 
   #aboutPicture {
     width: 210px;
@@ -344,9 +358,9 @@ p.buttons:hover {
     font-size: 18px;
   }
 
-  #projectsSection {
+  /* #projectsSection {
     font-size: var(--bigFont);
-  }
+  } */
 
   .overlay {
     width: 60vw;
@@ -354,11 +368,21 @@ p.buttons:hover {
   }
 
   .overlay-title {
-    font-size: x-large;
+    font-size: 38px;
   }
 
   .overlay-text {
-    font-size: medium;
+    font-size: 24px;
+  }
+
+  @media (max-width: 2000px) {
+    .overlay-title {
+      font-size: 32px;
+    }
+    
+    .overlay-text {
+      font-size: 24px;
+    }
   }
 
   #happiest {
@@ -373,9 +397,9 @@ p.buttons:hover {
     width: 60vw;
   }
 
-  #contactSection {
+  /* #contactSection {
     font-size: var(--bigFont);
-  }
+  } */
 
   #iconStyles {
     font-size: var(--regFont);

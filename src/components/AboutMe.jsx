@@ -1,22 +1,17 @@
 import profilePicture2 from '../assets/new-portfolio-pic.jpg'
 
 function AboutMe() {return(
-    <div id='aboutSection' className='sectionContainer'>
-        <h1 className='headingFont'>About Liza</h1>
+    // <div id='aboutSection' className='sectionContainer'>
+    <div className='sectionContainer'>
+        <h2>Let Me Introduce Myself</h2>
         <div className='about'>
             <img id='aboutPicture' src={profilePicture2} alt="Image of Liza Parr" />
-            <p>
-                I am a dedicated web developer with a <b>distinctive background</b>. I recently graduated from the <b>Columbia Engineering Fullstack Coding Boot Camp</b>, offered by Columbia University, in April 2023. Prior to pursuing my career in web development, I obtained a B.S. in <b>Mechanical Engineering</b> from the University of Maryland.
-            </p>
-            <p>
-                Before transitioning to web development, I had the unique experience of <b>teaching high school math</b>. This opportunity honed my communication and problem-solving skills, while also igniting my passion for technology and interaction design.
-            </p>
-            <p>
-                With a strong work ethic and a commitment to continuous growth, I strive to create <b>intuitive and visually captivating websites</b>. Equipped with a solid engineering foundation, I bring a unique perspective to web development. I excel at collaborating within teams, applying logical thinking, and solving complex problems.
-            </p>
-            <p>
-                I'm thrilled to embark on the next phase of my career and share my portfolio with you. It showcases my technical skills, creativity, and dedication to delivering exceptional results. I'm eager to <b>connect with you</b> and <b>explore potential collaborations or opportunities</b>.
-            </p>
+            <p>As you're aware, my name is Liza...I can be described as vivacious, hard working, some might go so far as to say I'm extraordinarily funny. But let me paint a more colorful picture for you:</p>
+            <p>We'll get the meat-and-potatoes out of the way first. I went to school for Mechanical Engineering (University of Maryland, go Terps!) and shortly after graduating I shifted to teaching.</p>
+            <p>Using my people skills and burning love for math, I had the opportunity to teach some seriously amazing (and absolutely hysterical) kids.</p>
+            <p>Cue: web development. I enrolled in a fullstack web dev boot camp as a way to fulfill what had always felt like a long-shot goal of being a developer. Being a self-starter is something I take pride in. With a mountain of obstacles in my way, I've been able to achieve my goals by doing one thing at a time, with integrity and some elbow grease. The metaphorical kind - I'm also quite particular about my workspace being clean.</p>
+            
+            <p>Stepping off my soap box: I want to create captivating products with a team of talented and likeminded professionals. Take a look at my projects and connect with me via the links below!</p>
         </div>
     </div>
 )}

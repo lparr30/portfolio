@@ -6,7 +6,7 @@ const cardInfo = [
     {
         picName: 'happiest',
         title: 'Happiest Hour',
-        description: 'is a collaborative React app on which I spearheaded frontend development while my colleague tackled backend inteicacies. This project provided many challenges both anticipated and unforeseen. Ultimately, our efforts culminated in a sophisticated yet user-friendly application, empowering individuals to effortlessly explore and discover top-rated happy hour offerings within a specified zip code, thereby enhancing their social experiences.',
+        description: 'is a collaborative React app on which I spearheaded frontend development while my colleague tackled backend intricacies. Several of my contributions to this website included devising elegant solutions for accommodating bar names of varying lengths within containers. I also introduced precise animations, synchronizing clock hands to real-time. My partner and I co-developed critical functionalities like populating Yelp API data, ensuring the accuracy and credibility of information.This project provided many challenges both anticipated and unforeseen, refining my communication and time management skills. Ultimately our efforts culminated in a polished and intuitive website, empowering individuals to effortlessly explore and discover top-rated happy hours in any zip code.',
         image: happiestHour,
         alt: 'Landing page of Happiest Hour',
         repoLink: 'https://github.com/ColdWeatherBoyy/happiest-hour',
