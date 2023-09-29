@@ -5,11 +5,15 @@
   --introBackground: rgb(214, 112, 33);
   --corners: 18px;
   --introFont: 'Philosopher', sans-serif;
+  --cream: rgb(235, 229, 209);
 }
 
 * {
-  font-family: 'Noto Sans KR', sans-serif;
-  color: rgb(220, 220, 220);
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Philosopher', sans-serif;
+  /* color: rgb(220, 220, 220); */
+  /* color: rgb(254,251,234); */
+  color: var(--cream);
   background-color: rgb(180, 68, 37);
 }
 
