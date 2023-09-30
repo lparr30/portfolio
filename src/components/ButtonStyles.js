@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
+    // background-color: green;
     display: flex;
     justify-content: space-between;
     gap: 30px;
     background-color: rgba(0,0,0,0)
-    // border-radius: 6px;
-    // background-color: green;
 `
 
 // export const Button = styled.button`

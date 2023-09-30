@@ -28,11 +28,12 @@ const Link = styled.a`
 const Icon = styled.img`
     width: 40px;
     height: 40px;
-    // border: 1px solid;
-    // padding: 2px;
-    // border-radius: 2px;
-    // box-shadow: white -4px -4px 6px;
+    margin: auto 10px;
     background-color: rgba(0,0,0,0);
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 const iconInfo = [
@@ -63,7 +64,7 @@ function Contact({ contactClick }) {
     
     return(
     <ContactContainer $boxShadow={buttonState.boxShadow}>
-        <ButtonContainer>
+        {/* <ButtonContainer> */}
             {iconInfo.map((item, index) => {
                 
 
@@ -72,7 +73,7 @@ function Contact({ contactClick }) {
                     <Link key={index} href={item.url} target="_blank"><Icon src={item.icon} alt={item.alt}/></Link>
                 )
             })}
-        </ButtonContainer>
+        {/* </ButtonContainer> */}
     </ContactContainer>
 )}
 
