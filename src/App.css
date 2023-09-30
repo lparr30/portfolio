@@ -1,35 +1,73 @@
 :root {
-  --neuShadow: -4px -4px 6px rgba(230, 230, 230, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.239);
-  --bigShadow: -4px -4px 6px rgba(215, 215, 215, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.258);
-  --orangeShadow: -4px -4px 6px rgba(251, 140, 36, 0.657), 4px 4px 6px rgba(0, 0, 0, 0.506);
-  --introBackground: rgb(214, 112, 33);
-  --corners: 18px;
-  --introFont: 'Philosopher', sans-serif;
+  /* --neuShadow: -4px -4px 6px rgba(230, 230, 230, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.239); */
+  /* --bigShadow: -4px -4px 6px rgba(215, 215, 215, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.258); */
+  /* --orangeShadow: -4px -4px 6px rgba(251, 140, 36, 0.657), 4px 4px 6px rgba(0, 0, 0, 0.506); */
+  /* --introBackground: rgb(214, 112, 33); */
+  /* --corners: 18px; */
+  --orange: rgb(180, 68, 37);
+  --fontNormal: 'Jost', sans-serif;
   --cream: rgb(235, 229, 209);
+  --margin: 72px;
+  --fontFancy: 'Soothing', sans-serif;
+}
+
+@font-face {
+  font-family: 'Soothing';
+  src: url('../public/Soothing.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-  /* font-family: 'Noto Sans KR', sans-serif; */
-  font-family: 'Philosopher', sans-serif;
-  /* color: rgb(220, 220, 220); */
-  /* color: rgb(254,251,234); */
+  /* font-family: 'Philosopher', sans-serif; */
+  /* font-family: 'Soothing'; */
   color: var(--cream);
-  background-color: rgb(180, 68, 37);
+  background-color: var(--orange);
 }
 
-.sectionContainer {
+body {
+  margin: 32px;
+  font-family: var(--fontNormal);
+  padding: 40px;
+  border: 1px solid var(--cream)
+}
+
+.animate {
+  /* background-image: linear-gradient(136deg, var(--cream), rgb(255, 255, 255) 90%); */
+  /* background-size: auto auto; */
+  /* background-clip: border-box; */
+  /* background-size: 200% auto; */
+  /* color: #fff; */
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite; */
+  /* display: inline-block; */
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* h2 {
+  font-style: italic;
+} */
+
+/* .sectionContainer {
   margin: 0 15px;
   padding: 20px 0;
-}
+} */
 
-#navbar {
+/* #navbar {
   display: flex;
   justify-content: space-between;
   height: 70px;
   padding: 10px;
-}
+} */
 
-.buttons {
+/* .buttons {
   font-size: 17px;
   box-shadow: var(--neuShadow);
   width: 4em;
@@ -46,8 +84,8 @@ p.buttons:hover {
   font-weight: bold;
   box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
   cursor: pointer;
-}
-
+} */
+/* 
 #picture {
   width: 210px;
   height: auto;
@@ -68,13 +106,13 @@ p.buttons:hover {
   margin-left: 10vw;
   padding-left: 12px;
   padding-right: 12px;
-}
-
+} */
+/* 
 #first {
   font-size: 1.5em;
   background-color: var(--introBackground);
   border-radius: var(--corners);
-}
+} */
 
 /* #second {
   font-size: 45px;
@@ -84,7 +122,7 @@ p.buttons:hover {
   font-family: var(--introFont);
 } */
 
-h1 {
+/* h1 {
   font-size: 45px;
   margin-left: 49px;
   background-color: var(--introBackground);
@@ -103,7 +141,7 @@ h1 {
 h2 {
   font-family: var(--introFont);
   font-style: italic;
-}
+} */
 
 /* 
 .headingFont {
@@ -241,7 +279,7 @@ h2 {
   box-shadow: var(--bigShadow);
 }
 
-.iconBackground {
+/* .iconBackground {
   background-color: white;
   border-radius: 10%;
   padding: 4%;
@@ -287,9 +325,9 @@ h2 {
 #footer {
   padding-bottom: 10px;
   text-align: center;
-}
+} */
 
-@media (min-width: 481px) {
+/* @media (min-width: 481px) {
   #picture {
     width: 230px;
     height: auto;
@@ -303,8 +341,8 @@ h2 {
     padding-left: 15px;
     margin-left: 22vw;
   }
-}
-
+} */
+/* 
 @media (min-width: 769px) {
   :root {
     --bigFont: 30px;
@@ -349,9 +387,9 @@ h2 {
     font-size: 58px;
   }
 
-  /* #aboutSection {
+  #aboutSection {
     font-size: var(--bigFont);
-  } */
+  }
 
   #aboutPicture {
     width: 210px;
@@ -362,9 +400,9 @@ h2 {
     font-size: 18px;
   }
 
-  /* #projectsSection {
+  #projectsSection {
     font-size: var(--bigFont);
-  } */
+  }
 
   .overlay {
     width: 60vw;
@@ -400,11 +438,11 @@ h2 {
   #beach {
     width: 60vw;
   }
-
+/* 
   /* #contactSection {
     font-size: var(--bigFont);
-  } */
-
+  } */ 
+/* 
   #iconStyles {
     font-size: var(--regFont);
   }
@@ -415,10 +453,10 @@ h2 {
   
   .iconAlt {
     width: 40px;
-  }
-}
+  } */
 
-@media (min-width: 1025px) {
+
+/* @media (min-width: 1025px) {
   #picture {
     width: 350px;
     height: auto;
@@ -448,10 +486,10 @@ h2 {
   #beach {
     width: 50vw;
   }
-}
+} */
 
-@media (min-width: 1201px) {
+/* @media (min-width: 1201px) {
   #aboutPicture {
     width: 185px;
   }
-}
+} */

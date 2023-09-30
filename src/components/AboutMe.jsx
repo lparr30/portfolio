@@ -1,11 +1,12 @@
 import profilePicture2 from '../assets/new-portfolio-pic.jpg'
+import headshot from '../assets/headshot.jpg'
 
 function AboutMe() {return(
     // <div id='aboutSection' className='sectionContainer'>
     <div className='sectionContainer'>
         <h2>Let Me Introduce Myself</h2>
         <div className='about'>
-            <img id='aboutPicture' src={profilePicture2} alt="Image of Liza Parr" />
+            <img id='aboutPicture' src={headshot} alt="Image of Liza Parr" />
             <p>I can be described as vivacious, hard working, some might go so far as to say I'm extraordinarily funny. But let me paint a more colorful picture for you:</p>
             <p>The meat and potatoes: I went to school for Mechanical Engineering (University of Maryland, go Terps!) and shortly after graduating I shifted to teaching.</p>
             <p>Using my people skills and burning love for math, I had the opportunity to teach some seriously amazing (and absolutely hysterical) kids.</p>
