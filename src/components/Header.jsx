@@ -6,20 +6,16 @@ import { useState, useEffect } from "react";
 const StickyHeader = styled.header`
     // background-color: blue;
     width: fit-content;
-    // position: sticky;
-    // top: 32px;
-    // margin-left: 100%;
-    position: absolute;
     // position: fixed;
+    position: absolute;
     right: var(--margin);
     z-index: 2;
     border-radius: 6px;
     display: flex;
     justify-content: flex-end;
     background-color: rgba(0,0,0,0);
-    // transform: translateY(${(props) => props.$buttonShift});
-    top: ${(props) => props.$buttonShift}
-    transition: transform 0.3s;
+    // top: ${(props) => props.$buttonShift};
+    // transition-duration: 0.3s;
 `
 
 const Button = styled.button`
@@ -29,12 +25,36 @@ const Button = styled.button`
     // box-shadow: -4px -4px 6px rgba(230, 230, 230, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.239);
     border-radius: 6px;
     border-radius: 50%;
-    background-color: var(--cream);
-    color: var(--orange);
-    padding: 8px 14px;
-    font-size: 18px;
+    // background-color: var(--cream);
+    // color: var(--orange);
+    // padding: 8px 14px;
+    font-family: var(--fontNormal);
+    font-size: 22px;
     font-style: italic;
+    text-decoration: underline;
     cursor: pointer;
+
+
+    &:hover {
+        // box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
+        font-weight: bold;
+    }
+`
+
+const ToTop = styled.button`
+    background-color: blue;
+    width: 88px;
+    height: auto;
+    position: fixed;
+    bottom: 50px;
+    border: none;
+    border-radius: 6px;
+    font-family: var(--fontNormal);
+    font-size: 22px;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    visibility: ${(props) => props.$visibility};
 
 
     &:hover {
@@ -48,49 +68,43 @@ function Header({ contactMe }) {
     const [yScroll, setYscroll] = useState(0)
 
 
-    // useEffect(() => {
-    //     const handleButtonShift = () => {
-    //         setYscroll(window.scrollY);
-    //         console.log('i am tired')
-    //     };
+    useEffect(() => {
+        const handleShowButton = () => {
+            setYscroll(window.scrollY);
+            // console.log('i am tired')
+        };
         
-    //     window.addEventListener('scroll', handleButtonShift);
+        window.addEventListener('scroll', handleShowButton);
 
-    //     return () => {
-    //         window.removeEventListener('scroll', handleButtonShift)
-    //     };
+        return () => {
+            window.removeEventListener('scroll', handleShowButton)
+        };
 
-    // }, []); 
+    }, []); 
     //this use effect runs once on page load, but here's what it does:
-    //handleButtonShift updates the scroll posiiton of the window as setYScroll
+    //handleShowButton updates the scroll posiiton of the window as setYScroll
     //whenever the user scrolls
-    //then the useeffect hook is used to attach handleButtonShift to the eventlistener
+    //then the useeffect hook is used to attach handleShowButton to the eventlistener
     //then we clean up by removing it.
     //even though the use effect only runs on page load, the usestate variables
     //are updated whenever the user scrolls
 
-    const handleButtonShift = () => {
-        setYscroll(window.scrollY);
-        console.log('i am tired')
-    };
-    window.addEventListener('scroll', handleButtonShift);
-
-    // window.removeEventListener('scroll', handleButtonShift);
 
 
-
-    const buttonShift = {
-        top: yScroll ? '-72px' : '0'
+    const visibility = {
+        visibility: (yScroll > 100) ? 'visibile' : 'hidden'
     }
 
 
     return(
-        <StickyHeader $buttonShift={buttonShift.top}>
+        <StickyHeader>
+        {/* <StickyHeader> */}
             <ButtonContainer>
-                <Button>About</Button>
+                {/* <Button>Home</Button> */}
                 <Button>Work</Button>
                 <Button onClick={contactMe}>Contact</Button>
             </ButtonContainer>
+            <ToTop $visibility={visibility.visibility}>Scroll to Top</ToTop>
         </StickyHeader>
     );
 }

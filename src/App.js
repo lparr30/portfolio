@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header'
 // import Homepage from './components/Homepage';
 import Landing from './components/Landing';
-import AboutMe from './components/AboutMe';
+// import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
 import Projects from './components/projectSection/Projects';
 import { useState } from 'react';
@@ -24,11 +24,11 @@ function App() {
   return (
     <div className="App">
       <Header contactMe={contactMe} />
-      {/* <Homepage/> */}
       <Landing />
-      <AboutMe />
       <Projects />
       <Contact contactClick={contactClick}/>
+      {/* <Homepage/> */}
+      {/* <AboutMe /> */}
       {/* <Footer /> */}
     </div>
   );

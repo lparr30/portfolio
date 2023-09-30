@@ -6,18 +6,16 @@ import gmail from '../assets/gmail-icon.svg'
 
 const ContactContainer = styled.div`
     display: flex;
-    // justify-content: flex-end;
-    position: fixed;
-    bottom: 24px;
-    // right: var(--margin);
-    // padding: 8px 72px 24px 72px;
-    padding: 6px 6px 6px 0;
-    width: fit-content;
+    justify-content: center;
+    // position: fixed;
+    // bottom: 24px;
+    // padding: 6px 6px 6px 0;
+    // width: fit-content;
     border-radius: 6px;
     z-index: 2;
     background-color: yellow;
     background-color: rgba(0,0,0,0);
-    box-shadow: ${(props) => props.$boxShadow};    
+    // box-shadow: ${(props) => props.$boxShadow};    
 `
 
 const Link = styled.a`
@@ -30,6 +28,9 @@ const Icon = styled.img`
     height: 40px;
     margin: auto 10px;
     background-color: rgba(0,0,0,0);
+    border-radius: 6px;
+    box-shadow: ${(props) => props.$boxShadow};    
+
 
     &:hover {
         transform: scale(1.1);
@@ -59,18 +60,18 @@ function Contact({ contactClick }) {
     
 
     const buttonState = {
-        boxShadow: contactClick ? '0 0 5px 5px var(--cream)' : 'none' 
+        boxShadow: contactClick ? '0 0 4px 4px var(--cream)' : 'none' 
     }
     
     return(
-    <ContactContainer $boxShadow={buttonState.boxShadow}>
+    <ContactContainer >
         {/* <ButtonContainer> */}
             {iconInfo.map((item, index) => {
                 
 
                 return(
 
-                    <Link key={index} href={item.url} target="_blank"><Icon src={item.icon} alt={item.alt}/></Link>
+                    <Link key={index} href={item.url} target="_blank"><Icon $boxShadow={buttonState.boxShadow} src={item.icon} alt={item.alt}/></Link>
                 )
             })}
         {/* </ButtonContainer> */}
