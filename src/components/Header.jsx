@@ -41,43 +41,56 @@ const Button = styled.button`
     }
 `
 
-const ToTop = styled.button`
-    background-color: blue;
-    width: 88px;
-    height: auto;
-    position: fixed;
-    bottom: 50px;
-    border: none;
-    border-radius: 6px;
-    font-family: var(--fontNormal);
-    font-size: 22px;
-    font-style: italic;
-    text-decoration: underline;
-    cursor: pointer;
-    visibility: ${(props) => props.$visibility};
+// const ToTop = styled.button`
+//     background-color: blue;
+//     width: 88px;
+//     height: auto;
+//     position: fixed;
+//     bottom: 50px;
+//     border: none;
+//     border-radius: 6px;
+//     font-family: var(--fontNormal);
+//     font-size: 22px;
+//     font-style: italic;
+//     text-decoration: underline;
+//     cursor: pointer;
+//     visibility: ${(props) => props.$visibility};
 
 
-    &:hover {
-        // box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
-        font-weight: bold;
-    }
-`
+//     &:hover {
+//         // box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
+//         font-weight: bold;
+//     }
+// `
 
 
 function Header({ contactMe }) {
     const [yScroll, setYscroll] = useState(0)
+    // const projects = document.getElementById('projects');
+
+    const scrollProjects = () => {
+
+    };
+
+    const scrollContact = () => {
+        window.scrollTo({
+            bottom: 0,
+            behavior: 'smooth'
+        });
+    };
+
+
 
 
     useEffect(() => {
-        const handleShowButton = () => {
+        const handleListener = () => {
             setYscroll(window.scrollY);
-            // console.log('i am tired')
         };
         
-        window.addEventListener('scroll', handleShowButton);
+        window.addEventListener('scroll', handleListener);
 
         return () => {
-            window.removeEventListener('scroll', handleShowButton)
+            window.removeEventListener('scroll', handleListener)
         };
 
     }, []); 
@@ -89,22 +102,25 @@ function Header({ contactMe }) {
     //even though the use effect only runs on page load, the usestate variables
     //are updated whenever the user scrolls
 
+    const handleScroll = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({behavior: 'smooth'})
+        };
+    };
 
 
-    const visibility = {
-        visibility: (yScroll > 100) ? 'visibile' : 'hidden'
-    }
+    // const visibility = {
+    //     visibility: (yScroll > 100) ? 'visibile' : 'hidden'
+    // }
 
 
     return(
         <StickyHeader>
-        {/* <StickyHeader> */}
             <ButtonContainer>
-                {/* <Button>Home</Button> */}
-                <Button>Work</Button>
-                <Button onClick={contactMe}>Contact</Button>
+                <Button onClick={() => handleScroll('projects')}>Projects</Button>
+                <Button onClick={() => handleScroll('contact')}>Contact</Button>
             </ButtonContainer>
-            <ToTop $visibility={visibility.visibility}>Scroll to Top</ToTop>
         </StickyHeader>
     );
 }

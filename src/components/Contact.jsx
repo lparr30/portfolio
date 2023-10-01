@@ -29,7 +29,7 @@ const Icon = styled.img`
     margin: auto 10px;
     background-color: rgba(0,0,0,0);
     border-radius: 6px;
-    box-shadow: ${(props) => props.$boxShadow};    
+    // box-shadow: ${(props) => props.$boxShadow};
 
 
     &:hover {
@@ -59,19 +59,19 @@ const iconInfo = [
 function Contact({ contactClick }) {
     
 
-    const buttonState = {
-        boxShadow: contactClick ? '0 0 4px 4px var(--cream)' : 'none' 
-    }
+    // const buttonState = {
+    //     boxShadow: contactClick ? '0 0 4px 4px var(--cream)' : 'none' 
+    // }
     
     return(
-    <ContactContainer >
+    <ContactContainer id="contact">
         {/* <ButtonContainer> */}
             {iconInfo.map((item, index) => {
                 
 
                 return(
 
-                    <Link key={index} href={item.url} target="_blank"><Icon $boxShadow={buttonState.boxShadow} src={item.icon} alt={item.alt}/></Link>
+                    <Link key={index} href={item.url} target="_blank"><Icon src={item.icon} alt={item.alt}/></Link>
                 )
             })}
         {/* </ButtonContainer> */}

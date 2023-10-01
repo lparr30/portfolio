@@ -1,6 +1,7 @@
 import ProjectCard from './ProjectCard';
 import cardInfo from './CardInfo';
 import { styled } from 'styled-components';
+import { useState } from 'react';
 
 const Container = styled.div`
     // background-color: pink;
@@ -10,8 +11,8 @@ const Container = styled.div`
     padding-bottom: 48px;
     width: 100%;
     height: 500px;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 175px;
+    margin-bottom: 175px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,18 +21,29 @@ const Container = styled.div`
 const TitleBox = styled.div`
     // background-color: green;
     width: 400px;
-    height: 80%;
+    height: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 30px;
     // margin-left: 88px;
 `
 
-const ProjectTitle = styled.h2`
+const ProjectTitle = styled.button`
+    border: none;
+    margin: 0;
+    width: fit-content;
     font-size: 32px;
     background-color: rgba(0,0,0,0);
     font-style: italic;
+    cursor: pointer;
     transform: translateX(${(props) => props.$shiftRight}px);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateX(${(props) => props.$hover}px);
+        // transition-duration: 0.3s;
+    }
 `
 
 const ProjectsBox = styled.div`
@@ -41,6 +53,7 @@ const ProjectsBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    visibility: ${(props) => props.$visibility};
 `
 
 const Project = styled.img`
@@ -69,8 +82,6 @@ const Button = styled.button`
     }
 `
 
-//need alt on images, descriptions
-
 const titles = [
     {
         name: 'Happiest Hour'
@@ -87,20 +98,37 @@ const titles = [
 ];
 
 function Projects(){
+    const [titleClick, setTitleClick] = useState(false);
+
+    const handleCardVisibility = () => {
+        setTitleClick(true)
+    };
+
+    const cardVisibility = {
+        visibility: titleClick ? 'visible' : 'hidden'
+    };
 
     return(
-        <Container>
+        <Container id='projects'>
             <TitleBox>
-                {titles.map((item, index) => {
+                {cardInfo.map((item, index) => {
                     let shift = index * 32;
+                    let hover = shift + 16;
 
                     return (
-                            <ProjectTitle key={index} $shiftRight={shift}>{item.name}</ProjectTitle>
+                            <ProjectTitle onClick={() => handleCardVisibility} key={index} $shiftRight={shift} $hover={hover}>{item.title}</ProjectTitle>
                     )
                 })}
             </TitleBox>
-            <ProjectsBox>
-                <Project src={cardInfo[0].image}></Project>
+            <ProjectsBox $visibility={cardVisibility.visibility}>
+                {/* {cardInfo.map((item, index) => {
+                    return (
+                        <Project key={index} src={item.image}></Project>
+                    )
+                })} */}
+
+
+                <Project src={cardInfo[0].image} alt={cardInfo[0].alt}></Project>
                 <Description>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos dolores maiores deleniti, laborum, quaerat exercitationem reprehenderit modi eaque possimus</Description>
                 <Button>Website</Button>
             </ProjectsBox>
