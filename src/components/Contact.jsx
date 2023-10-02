@@ -35,6 +35,22 @@ const Icon = styled.img`
     &:hover {
         transform: scale(1.1);
     }
+
+    @media (max-width: 320px) {
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        width: 30px;
+        height: 30px;
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
 `
 
 const iconInfo = [

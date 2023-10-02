@@ -5,7 +5,7 @@ export const ButtonContainer = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0,0,0,0);
 `
 
 // export const Button = styled.button`

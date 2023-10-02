@@ -1,6 +1,6 @@
 // import Navbar from "./Navbar";
 import { styled } from "styled-components";
-import { ButtonContainer } from "./ButtonStyles";
+// import { ButtonContainer } from "./ButtonStyles";
 import { useState, useEffect } from "react";
 
 const StickyHeader = styled.header`
@@ -16,6 +16,32 @@ const StickyHeader = styled.header`
     background-color: rgba(0,0,0,0);
     // top: ${(props) => props.$buttonShift};
     // transition-duration: 0.3s;
+
+    @media (max-width: 320px) {
+        right: 40px;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+ 
+`
+
+const ButtonContainer = styled.div`
+    // background-color: green;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: rgba(0,0,0,0);
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+  
 `
 
 const Button = styled.button`
@@ -23,8 +49,8 @@ const Button = styled.button`
     height: auto;
     border: none;
     // box-shadow: -4px -4px 6px rgba(230, 230, 230, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.239);
-    border-radius: 6px;
-    border-radius: 50%;
+    // border-radius: 6px;
+    // border-radius: 50%;
     // background-color: var(--cream);
     // color: var(--orange);
     // padding: 8px 14px;
@@ -33,12 +59,26 @@ const Button = styled.button`
     font-style: italic;
     text-decoration: underline;
     cursor: pointer;
+    background-color: rgba(0,0,0,0);
 
 
     &:hover {
         // box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
         font-weight: bold;
     }
+
+    @media (max-width: 320px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+
 `
 
 // const ToTop = styled.button`

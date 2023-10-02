@@ -10,12 +10,59 @@ const Container = styled.div`
     padding-top: 24px;
     padding-bottom: 24px;
     width: 100%;
-    height: 600px;
+    height: 55vw;
     margin-top: 175px;
     margin-bottom: 175px;
+    // display: block;
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+    @media (max-width: 320px) {
+        height: 375px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        height: 425px;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
+`
+
+const ProjectsContainer = styled.div`
+    // background-color: purple;
+    position: absolute;
+    // width: fit-content;
+    width: 55vw;
+    height: fit-content;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: ${(props) => props.$projectVisibility};
+
+    @media (max-width: 320px) {
+      
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        width: 40vw;
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
 `
 
 const Title = styled.h2`
@@ -23,32 +70,74 @@ const Title = styled.h2`
     font-style: italic;
     margin: 0;
     margin-bottom: 16px;
-`
 
-const ProjectsContainer = styled.div`
-    // background-color: purple;
-    width: fit-content;
-    height: 100%;   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @media (max-width: 320px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        font-size: 24px;
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
 `
 
 const Image = styled.img`
-    height: 60%;
-    width: auto;
+    // height: 400px;
+    // width: auto;
+    width: 55vw;
+    height: auto;
     border-radius: 2px;
+
+    @media (max-width: 320px) {
+        width: 50vw;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        width: 45vw;
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
 `
 
 const Description = styled.p`
-    font-size: 20px;
+    font-size: 18px;
+    // width: 600px;
+    width: 55vw;
+    text-align: center;
+
+    @media (max-width: 320px) {
+        font-size: 10px;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        font-size: 12px;
+        
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: 12px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 14px;
+    }
+
 `
 const Link = styled.button`
-    width: 100px;
+    // width: 100px;
+    width: fit-content;
     height: auto;
     border: none;
-    padding: 8px 0;
+    padding: 2px 8px;
     cursor: pointer;
     text-align: center;
     border-radius: 2px;
@@ -58,13 +147,28 @@ const Link = styled.button`
     font-size: 19px;
     font-style: italic;
     font-weight: bolder;
+
+    @media (max-width: 320px) {
+        font-size: 10px;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        font-size: 12px;
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
 `
 
 const Button = styled.button`
     width: fit-content;
     height: auto;
     border: none;
-    padding: 24px;
+    // margin: 0 350px;
+    margin: 0 30vw;
     font-family: var(--fontNormal);
     font-size: 22px;
     font-style: italic;
@@ -72,37 +176,68 @@ const Button = styled.button`
     cursor: pointer;
     text-align: center;
     background-color: rgba(0,0,0,0);
+    z-index: 2;
 
     &:hover {
         font-weight: bold;
     }
+
+    @media (max-width: 320px) {
+        position: relative;
+        font-size: 8px;
+        top: 180px;
+        margin: 0 12vw;
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        position: relative;
+        font-size: 14px;
+        top: 180px;
+        margin: 0 16vw;
+        
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
 `
 
 function Projects(){
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handlePrevButton = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + cardInfo.length) % cardInfo.length);
+    };
+
+    const handleNextButton = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % cardInfo.length);
+    };
+
+    const openWebsite = () => {
+        window.open(cardInfo[currentIndex].deployLink)
+    };
+
+
 
     return(
         <Container id='projects'>
-            <Button>Previous</Button>
-            <ProjectsContainer>
-                {/* {cardInfo.map((item, index) => {
+            <Button onClick={handlePrevButton}>Previous</Button>
+            {/* <Button onClick={handleNextButton}>Next</Button> */}
+
+            {/* <CenterBox> */}
+                {cardInfo.map((item, index) => {
                     return (
-                        <ProjectsContainer key={index}>
+                        <ProjectsContainer className='projectContainer' $projectVisibility={ index === currentIndex ? 'visible' : 'hidden'} key={index}>
                             <Title>{item.title}</Title>
                             <Image src={item.image} alt={item.alt}></Image>
                             <Description>{item.description}</Description>
-                            <Link>Website</Link>
+                            <Link onClick={openWebsite}>Website</Link>
                         </ProjectsContainer>
                     )
-                })} */}
-
-                
-                <Title>Happiest</Title>
-                <Image src={cardInfo[0].image}></Image>
-                <Description>insert a description here</Description>
-                <Link>Website</Link> 
-               
-            </ProjectsContainer>
-            <Button>Next</Button>
+                })}
+            {/* </CenterBox> */}
+            <Button onClick={handleNextButton}>Next</Button>
         </Container>
 )}
 
