@@ -2,6 +2,7 @@ import comingSoon from '../../assets/coming-soon.jpeg'
 import happiestHour from '../../assets/Happiest-Hour-pic.png'
 import tweeter from '../../assets/tweeter.png'
 import tsfapps from '../../assets/TSFApps.png'
+import TBHC from '../../assets/TBHC.png'
 
 const cardInfo = [
     {
@@ -19,15 +20,15 @@ const cardInfo = [
     //     deployLink: 'https://www.google.com'
     // },
     {
-        title: 'Tweeter',
-        description: 'A collective effort, Tweeter is a micro-blogging app that allows users to create an account and write Twits, among other actions. It provides users with a seamless experience to share their thoughts and connect with others.',
-        image: tweeter,
-        alt: 'Tweeter homepage',
-        deployLink: 'https://tweeter-usk.herokuapp.com/'
+        title: 'The Basement Hair Co.',
+        description: 'This project was a successful effort in transforming an existing website into a glowing representation of TBHC as a collective. Elevated yet welcoming, this business now has a website that reflects their brand.',
+        image: TBHC,
+        alt: 'TBHC homepage',
+        deployLink: 'https://www.google.com'
     },
     {
-        title: 'Intodoitive',
-        description: 'Liza is currently working on a to-do app that is intuitive to use with an aesthetic UI. This project uses a MERN tech stack.',
+        title: 'MK Photo',
+        description: 'Liza is currently working on a photography website, highlighting award-winning engagement and wedding photography. This project is a balance of elegance and statement pieces.',
         image: comingSoon,
         alt: 'coming soon',
         deployLink: 'https://www.google.com'
