@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header contactMe={contactMe} />
+      {/* <Header contactMe={contactMe} /> */}
       <Landing />
       <Projects />
       <Contact contactClick={contactClick}/>

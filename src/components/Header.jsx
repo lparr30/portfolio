@@ -6,16 +6,13 @@ import { useState, useEffect } from "react";
 const StickyHeader = styled.header`
     // background-color: blue;
     width: fit-content;
-    // position: fixed;
     position: absolute;
-    right: var(--margin);
     z-index: 2;
     border-radius: 6px;
-    display: flex;
-    justify-content: flex-end;
+    // display: flex;
+    // justify-content: flex-end;
     background-color: rgba(0,0,0,0);
-    // top: ${(props) => props.$buttonShift};
-    // transition-duration: 0.3s;
+    // padding: 0px 10px;
 
     @media (max-width: 320px) {
         right: 40px;
@@ -35,8 +32,9 @@ const ButtonContainer = styled.div`
     // background-color: green;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
     background-color: rgba(0,0,0,0);
+    // margin-left: 5vw;
 
     @media (max-width: 767px) {
         flex-direction: column;
@@ -50,14 +48,16 @@ const Button = styled.button`
     border: none;
     // box-shadow: -4px -4px 6px rgba(230, 230, 230, 0.225), 4px 4px 6px rgba(0, 0, 0, 0.239);
     // border-radius: 6px;
-    // border-radius: 50%;
+    border: 1px solid var(--cream);
+    padding: 4px;
+    border-radius: 2px;
     // background-color: var(--cream);
     // color: var(--orange);
     // padding: 8px 14px;
     font-family: var(--fontNormal);
     font-size: 22px;
     font-style: italic;
-    text-decoration: underline;
+    // text-decoration: underline;
     cursor: pointer;
     background-color: rgba(0,0,0,0);
 
@@ -80,28 +80,6 @@ const Button = styled.button`
     }
 
 `
-
-// const ToTop = styled.button`
-//     background-color: blue;
-//     width: 88px;
-//     height: auto;
-//     position: fixed;
-//     bottom: 50px;
-//     border: none;
-//     border-radius: 6px;
-//     font-family: var(--fontNormal);
-//     font-size: 22px;
-//     font-style: italic;
-//     text-decoration: underline;
-//     cursor: pointer;
-//     visibility: ${(props) => props.$visibility};
-
-
-//     &:hover {
-//         // box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.515), 4px 4px 6px rgba(0, 0, 0, 0.515);
-//         font-weight: bold;
-//     }
-// `
 
 
 function Header({ contactMe }) {
@@ -148,11 +126,6 @@ function Header({ contactMe }) {
             section.scrollIntoView({behavior: 'smooth'})
         };
     };
-
-
-    // const visibility = {
-    //     visibility: (yScroll > 100) ? 'visibile' : 'hidden'
-    // }
 
 
     return(
