@@ -27,8 +27,8 @@ const cardInfo = [
         deployLink: 'https://www.google.com'
     },
     {
-        title: 'MK Photo',
-        description: 'Liza is currently working on a photography website, highlighting award-winning engagement and wedding photography. This project is a balance of elegance and statement pieces.',
+        title: 'Life Coaching',
+        description: 'Liza is currently working on a website that highligts female health and wellness.',
         image: comingSoon,
         alt: 'coming soon',
         deployLink: 'https://www.google.com'

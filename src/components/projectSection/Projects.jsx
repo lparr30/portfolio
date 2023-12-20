@@ -49,6 +49,7 @@ const ProjectsContainer = styled.div`
     align-items: center;
     justify-content: center;
     visibility: ${(props) => props.$projectVisibility};
+    gap: 20px;
 
     @media (max-width: 320px) {
       
@@ -66,7 +67,8 @@ const ProjectsContainer = styled.div`
 `
 
 const Title = styled.h2`
-    font-size: 32px;
+    // font-family: var(--fontFancy);
+    font-size: 44px;
     font-style: italic;
     margin: 0;
     margin-bottom: 16px;
@@ -109,7 +111,7 @@ const Image = styled.img`
 `
 
 const Description = styled.p`
-    font-size: 18px;
+    // font-size: 20px;
     // width: 600px;
     width: 55vw;
     text-align: center;
@@ -128,7 +130,7 @@ const Description = styled.p`
     }
 
     @media (min-width: 1024px) {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 `
@@ -137,12 +139,14 @@ const Link = styled.button`
     width: fit-content;
     height: auto;
     border: none;
-    padding: 2px 8px;
+    // padding: 2px 8px;
+    padding: 6px;
     cursor: pointer;
     text-align: center;
     border-radius: 2px;
-    background-color: var(--cream);
-    color: var(--orange);
+    border: 1px solid var(--cream);
+    background-color: var(--orange);
+    color: var(--cream);
     font-family: var(--fontNormal);
     font-size: 19px;
     font-style: italic;
@@ -172,7 +176,10 @@ const Button = styled.button`
     font-family: var(--fontNormal);
     font-size: 22px;
     font-style: italic;
-    text-decoration: underline;
+    border: 1px solid var(--cream);
+    padding: 6px 8px;
+    border-radius: 2px;
+    // text-decoration: underline;
     cursor: pointer;
     text-align: center;
     background-color: rgba(0,0,0,0);

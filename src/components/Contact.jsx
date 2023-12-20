@@ -3,6 +3,7 @@ import { ButtonContainer } from "./ButtonStyles";
 import linkedin from '../assets/linkedin-icon.svg'
 import github from '../assets/github-icon.svg'
 import gmail from '../assets/gmail-icon.svg'
+import insta from '../assets/icons8-instagram.svg'
 
 const ContactContainer = styled.div`
     display: flex;
@@ -60,9 +61,9 @@ const iconInfo = [
         url: 'https://www.linkedin.com/in/lizajparr/'
     },
     {
-        icon: github,
-        alt: 'GitHub icon',
-        url: 'https://github.com/lparr30'
+        icon: insta,
+        alt: 'Instagram icon',
+        url: 'https://www.instagram.com/designs.by.liza/'
     },
     {
         icon: gmail,
