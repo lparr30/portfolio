@@ -3,6 +3,7 @@ import Header from "./Header";
 
 const Container = styled.div`
     // background-color: pink;
+    margin-top: 3vh;
     width: 100%;
     height: 95vh;
     display: grid;
@@ -60,7 +61,8 @@ const Summary = styled.p`
     text-align: right;
     // font-size: 28px;
     font-style: italic;
-    line-height: 1.5;
+    line-height: 1.8;
+    // gap: 20px;
 
     @media (max-width: 320px) {
         font-size: 8px;
@@ -107,7 +109,7 @@ function Landing() {return(
         <Header />
             <Name>LIZA PARR</Name>
             <Dev>WEB DESIGNER</Dev>
-            <Summary>Building bold, authentic websites<br />that showcase women-run businesses.</Summary>
+            <Summary>Building bold, authentic websites<br/>to showcase women-run businesses<br/>that cultivate the vitality of other women.</Summary>
         </TitleBox>
     </Container>
 )};

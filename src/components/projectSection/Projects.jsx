@@ -12,7 +12,7 @@ const Container = styled.div`
     width: 100%;
     height: 55vw;
     margin-top: 175px;
-    margin-bottom: 175px;
+    margin-bottom: 100px;
     // display: block;
     display: flex;
     align-items: center;
